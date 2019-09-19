@@ -29,7 +29,7 @@ Lets say HS2DDS has been set up in the **best possible way for the attacker** - 
 Assuming our attacker somehow knows that this is a list of names with no capital letters:
 let the parameters of the converter be complex enough that cracking the converter itself its not 
 reasonable - this should always be the case. For **each character** there are 431,115,750 possible color settings. 
-Infact, assuming our attacker is smart enough to pick the smallest node in the structure, if said node is just 4 charachters
+Infact, assuming our attacker is smart enough to pick the smallest node in the structure, if said node is just 4 characters
 long there are 1,597,524,182xN possible strings (where N is the number of *reasonable* 4 letter names).
 Even then, they can't assume that the first 4 letter name they get is the right one - they would then have to check against another node
 which happens to have at minimum the same 3 letters in it and then guess through that one until a reasonable result 
