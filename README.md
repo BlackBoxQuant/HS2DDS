@@ -30,7 +30,7 @@ Assuming our attacker somehow knows that this is a list of names with no capital
 let the parameters of the converter be complex enough that cracking the converter itself its not 
 reasonable - this should always be the case. For **each character** there are 431,115,750 possible color settings. 
 Infact, assuming our attacker is smart enough to pick the smallest node in the structure, if said node is just 4 characters
-long there are 1,597,524,182xN possible strings (where N is the number of *reasonable* 4 letter names).
+long and none of them repeat. There are 1,597,524,182xN possible strings (where N is the number of *reasonable* 4 letter names).
 Even then, they can't assume that the first 4 letter name they get is the right one - they would then have to check against another node
 which happens to have at minimum the same 3 letters in it and then guess through that one until a reasonable result 
 appears (if it does at all). Lets say they get super lucky and they find a 5 letter name that has these 4 characters (does such a name
@@ -38,6 +38,12 @@ exist?). Guessing + Verification = 1,597,524,182xN + 363,704,773. Again, this is
 no capital letters, no numbers.
 **None of this takes into account the fact that encryption prior to conversion will be an option,
 (key can safely stored in the structure behind a password) at that point, the attacker doesn't stand a chance**
+
+Without encryption prior to conversion (which would make this number astronomically large), lets assume the list uses a capital letter
+for the first letter of the name and the smallest name is 5 letters long (don't include names like DJ, which would be most securely
+stored as d\&^...(\J or simply dJ since an attacker would never assume you would store a 2 letter name like that). Now lets assume they
+can employ some sneaky tricks to throw out 90% of all possible (R,G,B) arrangements. They still have 1.9E13 possible choices...
+and this doesn't include the verification step. 
 
 ##### note:
 Parameters much more complex than 3 prime numbers will be available for use in BETA.
