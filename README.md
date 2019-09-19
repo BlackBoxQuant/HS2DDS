@@ -1,6 +1,6 @@
 # HS2DDS
 ##### PROGRESS: PRE-ALPHA 40%
-##### Up Next: Establish write, read, and maintain threads
+##### Up Next: Establish 'write', 'read', and 'maintain' threads
 ### ALPHA ETA: Q3 2020 (After Graduation)
 High Speed 2 Dimensional Data Strucutre is a long lived idea of mine that is finally, slowly being brought to life. 
 Currently HS2DDS is in its infancy. 
