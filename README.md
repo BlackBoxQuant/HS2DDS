@@ -8,7 +8,7 @@ Currently HS2DDS is in its infancy.
 HS2DDS will, given a classical data structure, convert the data in each node into a sequence of RGB values.
 Before writing the data to the image file, HS2DDS will perform a "RGB Spectrum Distribution Sort". This will create a 
 distribution function that, given the color data of a node and the current data image, will determine where on
-the image the new node should be inserted.Thus, the image will be sorted based on the RGB spectrum. 
+the image the new node should be inserted. Thus, the image will be sorted based on the RGB spectrum. 
 This will allow for very quick queries; given a node to query, it will use the distribution function to 
 determine a range of coordinates on the image that the data would exist. This will narrow down the search to O(n) 
 where n is a very small fraction of N. 
@@ -22,7 +22,7 @@ New data will sit in a prestorage section of the image file until someone querie
 HS2DDS is, by design, inheirently secure with respect to data theft. The full release version will store the parameters used for conversion
 on the image itself. They will of course be encoded using a secure password the user sets up. 
 Since the attacker doesn't know what series of primes were used, their only option is to use brute force. With 256 values for
-each color, 3 colors per character, multiple characters per node, and no way to know if a guess is correct unless without checking 
+each color, 3 colors per character, multiple characters per node, and no way to know if a guess is correct without checking 
 to see if it produces data that makes sense - it's going to take a long time. 
 
 Lets say HS2DDS has been set up in the **best possible way for the attacker** - using only lowercase letters (ie: a list of names).
