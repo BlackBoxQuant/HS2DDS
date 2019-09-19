@@ -46,6 +46,11 @@ stored as d\&^...(\J or simply dJ since an attacker would never assume you would
 can employ some sneaky tricks to throw out 90% of all possible (R,G,B) arrangements. They still have 1.9E13 possible choices...
 and this doesn't include the verification step. 
 
+To go even further, lets have the same situation as above, but now throw into the name random non character, non numerical, ascii
+characters. Without preconversion encryption, we have 1.5E10 possibilities for the first character alone - and no way to know
+that there are random nonimportant ascii values thrown in. The statistics of how many possible ways there are to guess if a node has
+random ascii values and how many + verification against unknown amount of unknown random ascii characters is astronomical. 
+
 ##### note:
 Parameters much more complex than 3 prime numbers will be available for use in BETA.
 
