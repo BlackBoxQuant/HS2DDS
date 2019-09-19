@@ -21,7 +21,8 @@ New data will sit in a prestorage section of the image file until someone querie
 ## Security
 HS2DDS is, by design, inheirently secure with respect to data theft. The full release version will store the parameters used for conversion
 on the image itself. They will of course be encoded using a secure password the user sets up. 
-Since the attacker doesn't know what series of primes were used, their only option is to use brute force. With 256 values for
+Since the attacker doesn't know what set of parameters were used (or their values), their only option 
+is to use brute force. With 256 values for
 each color, 3 colors per character, multiple characters per node, and no way to know if a guess is correct without checking 
 to see if it produces data that makes sense - it's going to take a long time. 
 
