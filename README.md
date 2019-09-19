@@ -1,4 +1,6 @@
 # HS2DDS
+## PROGRESS: PRE-ALPHA 40%
+### ALPHA ETA: Q3 2020 (After Graduation)
 High Speed 2 Dimensional Data Strucutre is a long lived idea of mine that is finally, slowly being brought to life. 
 Currently HS2DDS is in its infancy. 
 ## How Will HS2DDS Work When It Is Done?
@@ -20,6 +22,12 @@ New data will sit in a prestorage section of the image file until someone querie
 HS2DDS gets faster with each iteration and the next few iteration will result in vast improvements in speed.
 
 ## Eventual Experimental Branches
-ETA Q1 2021
 ### Machine Vision Queries
-
+Use machine vision to read multiple nodes at once. Viable if it can surpass multithreading (with thread counts currently 
+at 256 on top end for AMD processors, this is not likely).
+### Data Structure Stats Encoded Into Itself
+This will allow us to keep all information about the data structure in the data structure itself. No text files, no recomputing
+the distribution functions.
+### f(x(R,G,B)) Sort
+The RGB values of each node will be the input of a function which determines a unique position on the image. 
+Quieries will be nearly instantaneous. This function must be injective. 
