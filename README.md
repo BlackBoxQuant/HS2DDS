@@ -8,10 +8,12 @@ distribution function that, given the color data of a node, will determine where
 Thus, the image will be sorted based on the RGB spectrum. This will allow for very quick queries; given a node to query,
 it will use the distribution function to determine a range of coordinates on the image that the data would exist. This
 will narrow down the search to O(n) where n is a very small fraction of N. 
+
 Essentially, given a node, we determine if it is mostly R,B,or G, then we determine how R,B,G it is relative 
 to nodes in the data structure.
+
 Furthermore, due to the 2D nature of images, multithreading the search function will be very easy. 
-New data will sit in a prestorage section
-of the image file until someone queries the data structure.  
+New data will sit in a prestorage section of the image file until someone queries the data structure.  
+
 ##HS2DDS Isn't So High Speed - YET
 HS2DDS gets faster with each iteration.
