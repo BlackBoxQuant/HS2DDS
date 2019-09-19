@@ -1,7 +1,7 @@
-# HS2DDS
+# HS2DDS - A Secure And Fast Way To Store Data
 ##### PROGRESS: PRE-ALPHA 40%
 ##### Up Next: Establish 'write', 'read', and 'maintain' threads
-### ALPHA ETA: Q3 2020 (After Graduation)
+#### ALPHA ETA: Q3 2020 (After Graduation)
 High Speed 2 Dimensional Data Strucutre is a long lived idea of mine that is finally, slowly being brought to life. 
 Currently HS2DDS is in its infancy. 
 ## How Will HS2DDS Work When It Is Done?
@@ -18,10 +18,32 @@ to nodes in the data structure.
 
 Furthermore, due to the 2D nature of images, multithreading the search function will be very easy. 
 New data will sit in a prestorage section of the image file until someone queries the data structure.  
+## Security
+HS2DDS is, by design, inheirently secure with respect to data theft. The full release version will store the parameters used for conversion
+on the image itself. They will of course be encoded using a secure password the user sets up. 
+Since the attacker doesn't know what series of primes were used, their only option is to use brute force. With 256 values for
+each color, 3 colors per character, multiple characters per node, and no way to know if a guess is correct unless without checking 
+to see if it produces data that makes sense - it's going to take a long time. 
+
+Lets say HS2DDS has been set up in the **best possible way for the attacker** - using only lowercase letters (ie: a list of names).
+Assuming our attacker somehow knows that this is a list of names with no capital letters:
+let the parameters of the converter be complex enough that cracking the converter itself its not 
+reasonable - this should always be the case. For **each character** there are 431,115,750 possible color settings. 
+Infact, assuming our attacker is smart enough to pick the smallest node in the structure, if said node is just 4 charachters
+long there are 1,597,524,182xN possible strings (where N is the number of *reasonable* 4 letter names).
+Even then, they can't assume that the first 4 letter name they get is the right one - they would then have to check against another node
+which happens to have at minimum the same 3 letters in it and then guess through that one until a reasonable result 
+appears (if it does at all). Lets say they get super lucky and they find a 5 letter name that has these 4 characters (does such a name
+exist?). Guessing + Verification = 1,597,524,182xN + 363,704,773. Again, this is the best possible scenario: No special characters,
+no capital letters, no numbers.
+**None of this takes into account the fact that encryption prior to conversion will be an option,
+(key can safely stored in the structure behind a password) at that point, the attacker doesn't stand a chance**
+
+##### note:
+Parameters much more complex than 3 prime numbers will be available for use in BETA.
 
 ## HS2DDS Isn't So High Speed - YET
 HS2DDS gets faster with each iteration and the next few iteration will result in vast improvements in speed.
-
 ## Eventual Experimental Branches
 ### Dynamic Multithread
 Allow user to determine how many threads are used.
