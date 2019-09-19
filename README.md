@@ -30,4 +30,5 @@ This will allow us to keep all information about the data structure in the data 
 the distribution functions.
 ### f(x(R,G,B)) Sort
 The RGB values of each node will be the input of a function which determines a unique position on the image. 
-Quieries will be nearly instantaneous. This function must be injective. 
+Quieries will be nearly instantaneous. Issue: This function must be injective and not waste too much space 
+while also not overlaping nodes. 
