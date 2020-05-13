@@ -1,6 +1,11 @@
 # HS2DDS - A Secure And Fast Way To Store Data
 ##### PROGRESS: PRE-ALPHA 40%
 ## Up Next: Establish 'write', 'read', and 'maintain' threads | Create node sectors for HADOOP processing
+## Why?
+1: educational purposes. 
+Presenting data visually has its obvious benefits when it comes to communicating ideas such as sorting or manipulating data. with this program, it could easily be modified to produce a string of images, each representing a step in the data maniputlation process. These imagese could then be used to create an animation of what is happening to any data set in real time. 
+2: As a platform for learning hadoop and machine vision.
+After graduating, I plan to continue my education onward into the fields of big data and machine vision and this, for now, seems like a great platform for both. 
 #### ALPHA ETA: Q3 2020 (After Graduation)
 High Speed 2 Dimensional Data Strucutre is a long lived idea of mine that is finally, slowly being brought to life. 
 Currently HS2DDS is in its infancy. 
